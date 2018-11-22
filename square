@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+#include <math.h>
+
+#include <stdlib.h>
+int main()
+{
+	char c;
+	int k = 0;
+	int r, a, p, R;
+
+	printf("enter C or E or M\n");
+	scanf_s("%c", &c);
+
+	while (c != 'Q') {
+		printf("enter C or E or M\n");
+		scanf_s("%c", &c);
+
+		if (c == 'C') {
+			printf("enter r\n");
+			scanf_s("%d", &r);
+			printf("%f\n", 3.14*(float)r*(float)r);
+			getchar();
+		}
+		else if (c == 'E') {
+			printf("enter R and r\n");
+			scanf_s("%d%d", &R, &r);
+			printf("%d %d\n", R,r);
+			printf("%f\n", 3.14*(float)r*(float)R);
+			getchar();
+		}
+		else if (c == 'M') {
+			printf("enter a and p\n");
+			scanf_s("%d%d", &a, &p);
+			printf("%f\n", 0.5*(float)a*(float)p);
+			getchar();
+		}
+
+		else if (c != 'Q') {
+			printf("EROR\n");
+		}
+
+	}
+}
+	
